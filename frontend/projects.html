@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Team Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Team Task Manager</div>
+    <div class="nav-menu">
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="tasks.html" class="nav-link">Tasks</a>
+      <div class="user-info">
+        <span id="userName">User</span>
+        <span id="userRole" class="badge">Role</span>
+        <button onclick="logout()" class="btn btn-small">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Projects</h1>
+      <button id="createProjectBtn" class="btn btn-primary" style="display: none;">+ Create Project</button>
+    </div>
+
+    <div id="projectsList" class="projects-grid"></div>
+  </div>
+
+  <!-- Create/Edit Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Create Project</h2>
+
+      <form id="projectForm">
+        <input type="hidden" id="projectId">
+
+        <div class="form-group">
+          <label for="projectName">Project Name *</label>
+          <input type="text" id="projectName" required minlength="3">
+        </div>
+
+        <div class="form-group">
+          <label for="projectDescription">Description *</label>
+          <textarea id="projectDescription" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="projectStatus">Status</label>
+          <select id="projectStatus">
+            <option value="Active">Active</option>
+            <option value="On Hold">On Hold</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Team Members</label>
+          <div id="teamMembersList" class="checkbox-group"></div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="closeProjectModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
