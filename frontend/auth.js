@@ -1,5 +1,5 @@
-// API URL from config or default
-const API_URL = window.API_URL || 'http://localhost:5000/api';
+// API_URL is loaded from config.js
+// No need to redefine it here - config.js already sets it
 
 // Handle Login Form
 const loginForm = document.getElementById('loginForm');
