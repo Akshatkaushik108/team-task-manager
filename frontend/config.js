@@ -78,3 +78,5 @@ function showError(message) {
 function showSuccess(message) {
   alert(message); // Simple alert - can be enhanced with better UI
 }
+
+// Last updated: 2026-05-07
