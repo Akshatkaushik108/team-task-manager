@@ -13,8 +13,11 @@ const userRoutes = require('./routes/users');
 // Initialize Express app
 const app = express();
 
-// Middleware
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+// Middleware - CORS Configuration
+app.use(cors({
+  origin: ['https://frontend-production-be1e.up.railway.app'],
+  credentials: true
+})); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
@@ -65,7 +68,3 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📝 API URL: http://localhost:${PORT}`);
 });
-app.use(cors({
-  origin: ['frontend-production-be1e.up.railway.app'],
-  credentials: true
-}));
