@@ -65,3 +65,7 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📝 API URL: http://localhost:${PORT}`);
 });
+app.use(cors({
+  origin: ['frontend-production-be1e.up.railway.app'],
+  credentials: true
+}));
