@@ -1,5 +1,5 @@
-// API Configuration
-// Change this URL when deploying to Railway
+// API Configuration - Railway Production
+// Version: 1.1 - Updated: 2026-05-07
 const API_URL = 'https://team-task-manager-production-846b.up.railway.app/api';
 
 // Helper function to get auth token from localStorage

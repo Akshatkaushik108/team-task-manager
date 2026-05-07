@@ -1,4 +1,11 @@
+# Use Nginx to serve static files
 FROM nginx:alpine
+
+# Copy all frontend files to Nginx html directory
 COPY . /usr/share/nginx/html
+
+# Expose port 80 (Railway will map this to their port)
 EXPOSE 80
+
+# Nginx starts automatically with this image
 CMD ["nginx", "-g", "daemon off;"]
