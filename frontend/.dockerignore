@@ -1,0 +1,7 @@
+# Files to exclude from Docker build
+node_modules
+.git
+.gitignore
+*.md
+Dockerfile
+.dockerignore
