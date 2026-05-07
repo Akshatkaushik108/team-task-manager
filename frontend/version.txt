@@ -1,0 +1,4 @@
+Version: 1.1
+Updated: 2026-05-07
+API_URL: https://team-task-manager-production-846b.up.railway.app/api
+Build: Railway Production
