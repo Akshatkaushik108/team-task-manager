@@ -1,6 +1,6 @@
 // API Configuration
 // Change this URL when deploying to Railway
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'team-task-manager-production-846b.up.railway.app/api';
 
 // Helper function to get auth token from localStorage
 function getToken() {
