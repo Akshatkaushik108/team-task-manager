@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware - CORS Configuration
 app.use(cors({
-  origin: ['https://frontend-production-be1e.up.railway.app'],
+  origin: ['https://team-task-manager-production-e0f7.up.railway.app'],
   credentials: true
 })); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Parse JSON request bodies
